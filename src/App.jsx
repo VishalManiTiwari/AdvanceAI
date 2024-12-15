@@ -6,6 +6,7 @@ import speakimg from "./assets/speak.gif";
 import aigif from "./assets/aiVoice.gif";
 
 const App = () => {
+
   const {
     recognition,
     speaking,
@@ -24,7 +25,7 @@ const App = () => {
       via-purple-500 to-pink-500 text-transparent
        bg-clip-text text-3xl md:text-3xl sm:text-2xl xl:text-5xl
         my-4 top-3 relative  text-[15px]">
-        I'm Anushaka, Your Advanced Virtual Assistant
+        I'm Anushka, Your Advanced Virtual Assistant
       </span>
       {!speaking ? (
         <button
@@ -36,7 +37,7 @@ const App = () => {
           }}
           className="w-[180px] h-[40px] flex items-center justify-center gap-5 cursor-pointer text-lg rounded-2xl border-none bg-teal-500 shadow-lg shadow-teal-500/50"
         >
-          Click Here <CiMicrophoneOn />
+          Ask me <CiMicrophoneOn />
         </button>
       ) : (
         <div className="response flex flex-col items-center justify-center gap-2">
