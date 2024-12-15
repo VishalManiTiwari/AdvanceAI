@@ -19,10 +19,12 @@ const UserContext = ({ children }) => {
         window.speechSynthesis.speak(textSpeak);
     };
 
+    // Function to process AI response from Gemini API
     const aiResponse = async (prompt) => {
         try {
             let text = await run(prompt);
 
+            // Clean and sanitize the text
             const sanitizedText = text
                 .replace(/(\*|\*\*|tarankan)/g, "") 
                 .replace(/google/gi, "Vishal Mani Tiwari");
@@ -31,6 +33,7 @@ const UserContext = ({ children }) => {
             speak(sanitizedText);
             setResponse(true);
 
+            // Reset speaking state after timeout
             setTimeout(() => {
                 setSpeaking(false);
             }, 6000);
