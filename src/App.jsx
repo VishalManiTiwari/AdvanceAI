@@ -18,11 +18,13 @@ const App = () => {
 
   return (
     <div className="main h-screen w-full overflow-hidden flex flex-col items-center justify-start p-2 gap-2">
-      <img src={va} alt="ai.png" className="h-[70%]" />
+      <img src={va} alt="ai.png" 
+      className="xl:h-[70%] lg:h-[70%] md:h-[70%] sm:h-[70%] h-[65%]" />
       <span className="bg-gradient-to-r from-blue-500 
       via-purple-500 to-pink-500 text-transparent
-       bg-clip-text text-3xl md:text-3xl sm:text-2xl xl:text-5xl text-[15px]">
-        I'm Shifra, Your Advanced Virtual Assistant
+       bg-clip-text text-3xl md:text-3xl sm:text-2xl xl:text-5xl
+        my-4 top-3 relative  text-[15px]">
+        I'm Anushaka, Your Advanced Virtual Assistant
       </span>
       {!speaking ? (
         <button
